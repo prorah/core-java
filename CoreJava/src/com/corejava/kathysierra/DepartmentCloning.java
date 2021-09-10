@@ -1,6 +1,6 @@
 package com.corejava.kathysierra;
 
-public class DepartmentCloning {
+public class DepartmentCloning implements Cloneable{
 	private int deptSize;
 
 	public int getDeptSize() {

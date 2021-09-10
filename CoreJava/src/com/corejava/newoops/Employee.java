@@ -7,7 +7,6 @@ public class Employee extends Human {
 		System.out.println("employee class constructor invoked");
 	}
 
-	@Override
 	public void displayClass() {
 		System.out.println("method in employee class");
 	}

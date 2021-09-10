@@ -9,7 +9,7 @@ public class ArrayListImpl {
 
 	public static void main(String[] args) {
 		List<String> demoList = new ArrayList<String>();
-		demoList.add("rahul");
+		demoList.add("rahul");//returns boolean
 		demoList.add("shubham");
 		demoList.add("jagga");
 		// Iteration using List Iterator

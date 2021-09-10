@@ -1,6 +1,6 @@
 package com.corejava.collections;
 
-public class EmployeeCollections implements Comparable<EmployeeCollections> {
+public class EmployeeCollections /*implements Comparable<EmployeeCollections> */{
 	private String name;
 	private int age;
 
@@ -42,12 +42,6 @@ public class EmployeeCollections implements Comparable<EmployeeCollections> {
 	@Override
 	public String toString() {
 		return "EmployeeCollections [name=" + name + ", age=" + age + "]";
-	}
-
-	
-	@Override
-	public int compareTo(EmployeeCollections o) {
-		return this.name.compareTo(o.getName());
 	}
 
 }

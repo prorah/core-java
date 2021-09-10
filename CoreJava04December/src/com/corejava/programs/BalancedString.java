@@ -5,7 +5,7 @@ import java.util.Stack;
 public class BalancedString {
 
 	public static void main(String[] args) {
-		String inputString = "{{(())}}[[";
+		String inputString = "{{(())}}";
 		char[] str = inputString.toCharArray();
 		System.out.println(checkIfBalanced(str));
 	}

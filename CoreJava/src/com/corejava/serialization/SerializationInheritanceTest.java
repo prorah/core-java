@@ -15,7 +15,7 @@ import java.io.ObjectOutputStream;
 public class SerializationInheritanceTest {
 
 	public static void main(String[] args) throws IOException, ClassNotFoundException {
-		Man man = new Man("male", 26, "rahul");
+		Man man = new Man("M", 28, "rahul");
 
 		// Serialization process
 		FileOutputStream fos = new FileOutputStream("D:/serialization1.txt");
@@ -23,6 +23,7 @@ public class SerializationInheritanceTest {
 		System.out.println(man);
 		oos.writeObject(man);
 		oos.close();
+		System.out.println("------------------------------");
 
 		// Deserialization Process
 		FileInputStream fis = new FileInputStream("D:/serialization1.txt");

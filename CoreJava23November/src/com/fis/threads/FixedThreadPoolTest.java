@@ -7,16 +7,27 @@ import java.util.concurrent.Executors;
 public class FixedThreadPoolTest {
 
 	public static void main(String[] args) {
-		ExecutorService service = Executors.newFixedThreadPool(5); //define the pool size as 5 i.e. there will be 5 threads working on 100 tasks.
-		for(int i=0;i<100;i++){
-			service.execute(new Task());
+		ExecutorService service = Executors.newSingleThreadExecutor();
+		for (int i = 0; i < 3; i++) {
+			service.execute(new Task(i));
 		}
 	}
 }
 
 class Task implements Runnable {
+	int counter;
+
+	Task(int counter) {
+		this.counter = counter;
+	}
+
 	@Override
 	public void run() {
-		System.out.println(Thread.currentThread().getName());
+		System.out.println(counter);
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			e.printStackTrace();
+		}
 	}
 }

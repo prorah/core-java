@@ -3,8 +3,8 @@ package com.corejava.newoops;
 public class ConstructorTest {
 
 	public static void main(String[] args) {
-		Employee emp = (Employee) new Human("a",26);
-		Human human = emp;
+		Human human=new Employee("rahul",20);
+		human.displayClass();
 		System.out.println(human);
 	}
 }

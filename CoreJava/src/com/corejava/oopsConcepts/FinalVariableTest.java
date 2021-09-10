@@ -14,7 +14,7 @@ public class FinalVariableTest extends FinalInstanceVariableTest {
 	private static final FinalVariableTest finalVariableTest = new FinalVariableTest();
 
 	public static void main(String[] args){
-	//finalVariableTest=new FinalVariableTest();
+//finalVariableTest=new FinalVariableTest();
 	}
 
 }

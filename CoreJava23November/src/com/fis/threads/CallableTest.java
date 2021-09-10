@@ -10,12 +10,16 @@ import java.util.concurrent.Future;
 public class CallableTest {
 
 	public static void main(String[] args) throws InterruptedException, ExecutionException {
-		ExecutorService service = Executors.newFixedThreadPool(5);
-		Future<Integer> future = service.submit(()->{return 5;}); //immediately gives an empty placeholder.
-		Integer result = future.get();//the placeholder gets a value.
+		ExecutorService service = Executors.newFixedThreadPool(3);
+		Future<Integer> future = service.submit(new TaskCallable()); // immediately
+																		// gives
+																		// an
+																		// empty
+																		// placeholder.
+		Integer result = future.get();// the placeholder gets a value.
 		// the call to get blocks the main thread
-										// until future gets a value from the
-										// task.
+		// until future gets a value from the
+		// task.
 		// There is also an overloaded version of get(1, TimeUnit.SECONDS) that
 		// allow you to throw timeout exception if the value within the future
 		// is not available within the specified time.

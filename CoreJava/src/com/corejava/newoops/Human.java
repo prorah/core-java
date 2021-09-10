@@ -1,5 +1,6 @@
 package com.corejava.newoops;
 
+//This is parent class
 public class Human {
 	private String name;
 	private int age;
@@ -9,7 +10,6 @@ public class Human {
 	}
 
 	public Human(String name, int age) {
-		super();
 		System.out.println("Human class constructor invoked");
 		this.name = name;
 		this.age = age;

@@ -1,6 +1,6 @@
 package com.corejava.collections;
 
-public class DogCollections implements Comparable<DogCollections> {
+public class DogCollections {
 	private String color;
 
 	public DogCollections(String color) {
@@ -20,20 +20,16 @@ public class DogCollections implements Comparable<DogCollections> {
 	public boolean equals(Object obj) {
 		return this.color.length() == (((DogCollections) obj).getColor().length());
 	}
-
-	@Override
-	public String toString() {
-		return this.color;
-	}
-
+	
 	@Override
 	public int hashCode() {
 		return color.length();
 	}
 
 	@Override
-	public int compareTo(DogCollections arg0) {
-		return 0;
+	public String toString() {
+		return this.color;
 	}
 
+	
 }
